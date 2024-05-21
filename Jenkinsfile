@@ -6,6 +6,14 @@ pipeline {
     }
     
     stages {
+        stage('DFX test') {
+            steps {
+                script {
+                    sh(script: 'dfx')
+                }
+            }
+        }
+        
 
         stage('Building Docker Image') {
             steps {
