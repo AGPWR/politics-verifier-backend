@@ -47,11 +47,13 @@ pipeline {
                 }
             }
         }
+    }
+
     post {
-      always {
-        script {
-            sh 'docker logout'
+        always {
+            script {
+                sh 'docker logout'
+            }
         }
-      }
     }
 }
