@@ -1,9 +1,5 @@
 pipeline {
     agent any
-
-    tools {
-        dockerTool 'docker-latest'
-    }
     
     stages {
         stage('DFX test') {
