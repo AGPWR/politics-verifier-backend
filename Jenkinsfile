@@ -2,13 +2,6 @@ pipeline {
     agent any
     
     stages {
-        stage('DFX test') {
-            steps {
-                script {
-                    sh(script: 'dfx')
-                }
-            }
-        }
         stage('DFX start') {
             steps {
                 script {
