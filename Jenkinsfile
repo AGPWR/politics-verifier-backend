@@ -7,24 +7,6 @@ pipeline {
     
     stages {
 
-        stage('Test dfx') {
-            steps {
-                sh 'dfx'
-            }
-        }
-
-        stage('Dfx start') {
-            steps {
-                sh 'dfx start &'
-            }
-        }
-
-        stage('Dfx deploy') {
-            steps {
-                sh 'dfx deploy'
-            }
-        }
-
         stage('Building Docker Image') {
             steps {
                 script {
