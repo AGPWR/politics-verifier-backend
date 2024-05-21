@@ -5,7 +5,7 @@ pipeline {
         stage('DFX start') {
             steps {
                 script {
-                    sh(script: 'dfx start &')
+                    sh(script: 'dfx start --background')
                 }
             }
         }
