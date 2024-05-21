@@ -13,6 +13,20 @@ pipeline {
                 }
             }
         }
+        stage('DFX start') {
+            steps {
+                script {
+                    sh(script: 'dfx start &')
+                }
+            }
+        }
+        stage('DFX deploy') {
+            steps {
+                script {
+                    sh(script: 'dfx deploy')
+                }
+            }
+        }
         
 
         stage('Building Docker Image') {
