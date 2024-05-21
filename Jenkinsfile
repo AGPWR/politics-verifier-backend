@@ -8,12 +8,14 @@ pipeline {
     stages {
         stage('Test python') {
             steps {
+                sh 'cd src'
                 sh 'python main.py'
             }
         }
 
         stage('Test dfx') {
             steps {
+                sh 'cd ..'
                 sh 'dfx'
             }
         }
